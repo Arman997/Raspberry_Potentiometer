@@ -1,8 +1,8 @@
 import RPi.GPIO as GPIO
 import time
 
-potInp = 4
-ledPin = 18
+potInp = 18
+ledPin = 4
 
 def setup():
     GPIO.setmode(GPIO.BCM)
@@ -12,9 +12,9 @@ def setup():
 
 def loop():
     while True:
-            # print(GPIO.input(potInp), 'potentiometrinp')
-            # print(GPIO.PWM(potInp))
-            GPIO.output(ledPin, 1)
+            print(GPIO.input(potInp), 'potentiometrinp')
+           
+            
 
 def destroy():
     GPIO.output(ledPin, GPIO.LOW)     
